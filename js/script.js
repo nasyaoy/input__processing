@@ -18,11 +18,11 @@ phone.addEventListener('keydown', (event) => {
         isDash = true;
     }
 
-    if (event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace') {
+    if (event.key == 'Backspace' || event.key == 'ArrowRight' || event.key == 'ArrowLeft') {
         isControl = true;
     }
 
-    if (!isDigit) {
+    if (!isDigit && !isDash && !isControl) {
         event.preventDefault()
     }
 })
